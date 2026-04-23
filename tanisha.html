@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Tanisha ❤️</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background: linear-gradient(to right, #ff758c, #ff7eb3);
+        color: white;
+        overflow: hidden;
+    }
+
+    h1 {
+        margin-top: 100px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    #startBtn {
+        background: white;
+        color: #ff4b7d;
+    }
+
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        color: black;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        width: 300px;
+    }
+
+    .popup img {
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    .popup button {
+        background: #ff4b7d;
+        color: white;
+    }
+
+    #proposal button {
+        background: green;
+    }
+
+    #noBtn {
+        background: red;
+        position: absolute;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Hey Tanisha ❤️</h1>
+<button id="startBtn" onclick="startStory()">Click Here</button>
+
+<!-- Popup 1 -->
+<div class="popup" id="p1">
+    <p>Tanisha... I know you're angry 😔</p>
+    <img src="photo1.jpg">
+    <button onclick="next('p1','p2')">Next</button>
+</div>
+
+<!-- Popup 2 -->
+<div class="popup" id="p2">
+    <p>I made mistakes, but my love for you is always real ❤️</p>
+    <img src="photo2.jpg">
+    <button onclick="next('p2','p3')">Next</button>
+</div>
+
+<!-- Popup 3 -->
+<div class="popup" id="p3">
+    <p>You are the most beautiful part of my life 💖</p>
+    <img src="photo3.jpg">
+    <button onclick="next('p3','p4')">Next</button>
+</div>
+
+<!-- Popup 4 -->
+<div class="popup" id="p4">
+    <p>I miss your smile, your voice, everything about you 😢</p>
+    <img src="photo4.jpg">
+    <button onclick="next('p4','p5')">Next</button>
+</div>
+
+<!-- Popup 5 -->
+<div class="popup" id="p5">
+    <p>Tanisha, you are not just my girlfriend... you are my soulmate 💞</p>
+    <img src="photo5.jpg">
+    <button onclick="next('p5','p6')">Next</button>
+</div>
+
+<!-- Proposal -->
+<div class="popup" id="p6">
+    <p>Will you forgive me and be mine forever? 💍<br>– Mayank</p>
+    <button onclick="yes()">YES ❤️</button>
+    <button id="noBtn" onmouseover="moveNo()">NO 😢</button>
+</div>
+
+<script>
+function startStory() {
+    document.getElementById('p1').style.display = 'block';
+}
+
+function next(current, next) {
+    document.getElementById(current).style.display = 'none';
+    document.getElementById(next).style.display = 'block';
+}
+
+function yes() {
+    alert("Yay! I love you so much Tanisha ❤️");
+}
+
+function moveNo() {
+    let btn = document.getElementById("noBtn");
+    btn.style.top = Math.random() * window.innerHeight + "px";
+    btn.style.left = Math.random() * window.innerWidth + "px";
+}
+</script>
+
+</body>
+</html>
